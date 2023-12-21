@@ -3,7 +3,6 @@ package util
 import (
 	"crypto/rand"
 	"encoding/binary"
-	// "errors"
 	"github.com/stellar/go/clients/horizonclient"
 	"github.com/stellar/go/keypair"
 	"github.com/stellar/go/protocols/horizon"
@@ -220,29 +219,6 @@ func MintToken(kp *keypair.Full, contractAddr xdr.ScAddress, amount uint64, reci
 	}
 	return nil
 }
-
-// func GetTokenBalance(kp *keypair.Full, contractAddr xdr.ScAddress, balanceOf xdr.ScAddress) (uint64, error) {
-// 	stellarClient := env.NewStellarClient(kp)
-
-// 	GetTokenBalanceArgs, err := env.BuildGetTokenBalanceArgs(balanceOf)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	txMeta, err := stellarClient.InvokeAndProcessHostFunction("balance", GetTokenBalanceArgs, contractAddr, kp)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-
-// 	bal := txMeta.V3.SorobanMeta.ReturnValue.I128
-
-// 	if bal.Hi != 0 {
-// 		return 0, errors.New("balance too large - cannot be mapped to uint64")
-// 	} else {
-// 		Uint64Bal := uint64(bal.Lo)
-// 		return Uint64Bal, nil
-// 	}
-
-// }
 
 func MakeAccountAddress(kp keypair.KP) (xdr.ScAddress, error) {
 	accountId, err := xdr.AddressToAccountId(kp.Address())

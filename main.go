@@ -7,8 +7,8 @@ import (
 	"perun.network/go-perun/wire"
 	vc "perun.network/perun-demo-tui/client"
 	"perun.network/perun-demo-tui/view"
-	"perun.network/perun-stellar-backend/util"
 	"perun.network/perun-stellar-demo/client"
+	"perun.network/perun-stellar-demo/util"
 )
 
 const PerunContractPath = "./testdata/perun_soroban_contract.wasm"

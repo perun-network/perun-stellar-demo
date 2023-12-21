@@ -6,7 +6,7 @@ require (
 	github.com/stellar/go v0.0.0-20231212225359-bc7173e667a6
 	perun.network/go-perun v0.10.6
 	perun.network/perun-demo-tui v0.0.0-20230321094013-3e474bfabc8f
-	perun.network/perun-stellar-backend v0.0.0-20231221071114-72379e74cbcc
+	perun.network/perun-stellar-backend v0.0.0-20231221082332-b7b7d01aeaaf
 )
 
 require (
